@@ -1,0 +1,23 @@
+:concurrency: 5
+:queues:
+  - default
+
+development:
+  :concurrency: 10
+  :queues:
+    - default
+    - critical
+  :timeout: 60
+  :verbose: true
+  :logfile: ./log/sidekiq.log
+  :retry: true
+
+  testing:
+  :concurrency: 10
+  :queues:
+    - default
+    - critical
+  :timeout: 60
+  :verbose: true
+  :logfile: ./log/sidekiq.log
+  :retry: true
